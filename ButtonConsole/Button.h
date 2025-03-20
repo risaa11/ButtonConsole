@@ -44,6 +44,14 @@ public:
     void draw() override;
 };
 
+class Row : public UIElement {
+public:
+    vector<Button*> components;
+    Row(vector<Button*> components);
+    void draw() override;
+    void printStr(int number);
+};
+
 class Window {
 public:
     int size_x;
@@ -57,5 +65,7 @@ public:
 bool selectStartColor();
 
 bool selectGameMode();
+
+bool drawTest();
 
 #endif
